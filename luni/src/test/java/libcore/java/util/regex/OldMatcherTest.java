@@ -385,6 +385,11 @@ public class OldMatcherTest extends TestCase {
         assertFalse(mat3.find()); // No "new" in the region.
         assertTrue(mat3.find(5)); // find(int) ignores the region.
     }
+
+        mat3.region(1, 4);
+        assertFalse(mat3.find()); // No "new" in the region.
+        assertTrue(mat3.find(5)); // find(int) ignores the region.
+    }
     @TestTargetNew(
         level = TestLevel.PARTIAL_COMPLETE,
         notes = "Verifies matches() method for predefined.",
