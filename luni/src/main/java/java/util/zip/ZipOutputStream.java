@@ -220,8 +220,8 @@ public class ZipOutputStream extends DeflaterOutputStream implements
         } else {
             writeShort(cDir, 0);
         }
-        // Write the central dir
-        out.write(cDir.toByteArray());
+        // Write the central directory.
+        cDir.writeTo(out);
         cDir = null;
 
     }
